@@ -31,6 +31,13 @@ addEventListener('keydown',function(event) {
     }
 })
 
+let score = 0;
+let highscore = parseInt(localStorage.getItem('highscore')) || 0;
+
+function updateScoreboard() {
+    document.getElementById('scoreboard').textContent = `Punkte: ${score} | Highscore: ${highscore}`;
+}
+
 function updateGame() {
     ctx.clearRect(0,0,canvas.width,canvas.height);
 
@@ -50,6 +57,11 @@ function updateGame() {
         obstacle.x = 400 + Math.random() * 200;
         // obstacle.speed = -3;
         // obstacle.x -= obstacle.speed;
+        score += 1;
+        updateScoreboard();
+        if( obstacle.speed < 100 ){
+            obstacle.speed += 0.5;
+        }
     }
 
     if( player.x < obstacle.x + obstacle.width &&
@@ -59,6 +71,8 @@ function updateGame() {
     ){
         alert('Game Over');
         obstacle.x = 400;
+        score = 0;
+        obstacle.speed = 3;
     }
 
     ctx.fillStyle = 'red';
