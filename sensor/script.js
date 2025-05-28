@@ -2,9 +2,6 @@ var ball       = document.querySelector('.ball');
 var garden     = document.querySelector('.garden');
 var output     = document.querySelector('.output');
 var sensorList = document.querySelector('.sensorList');
-var m1 = document.getElementById('meter_1');
-var m2 = document.getElementById('meter_2');
-var m3 = document.getElementById('meter_3');
 var m4 = document.getElementById('meter_4');
 var m5 = document.getElementById('meter_5');
 var m6 = document.getElementById('meter_6');
@@ -26,7 +23,7 @@ const options = { frequency: 60, referenceFrame: 'device' };
 let laSensor = new LinearAccelerationSensor(options);//({frequency: 60});
 //accelerometer without gravity
 laSensor.addEventListener('reading', e => {
-  const dt = laSensor.timestamp - lastTimeStamp
+  const dt = laSensor.timestamp - lastTimeStamp;
   // laxa.push( [ laSensor.x.toFixed(3), laSensor.y.toFixed(3), laSensor.z.toFixed(3) ] );
   lastTimeStamp = laSensor.timestamp;//Date.now();
   vx += laSensor.x * ( dt );
@@ -56,13 +53,14 @@ function gardenClick() {
 }
 
 function sensorListClick() {
-  sensorList.textContent = "we start soon ";
+    sensorList.textContent = "we start soon ";
+    m4.value = 50;
   laSensor.start();
   const iinterval = setInterval( upDateScreen, 100 );
 }
 
 function upDateScreen() {
-  output.textContent =  "length la: " + laxa.length + "rel: " + roa.length + "abs: " + aoa.length + "\n";
+  //output.textContent =  "length la: " + laxa.length + "rel: " + roa.length + "abs: " + aoa.length + "\n";
   // if( laxa.length > 0 ){
     //linear acceleration worked
     m4.value = vx.toFixed(3);
@@ -77,5 +75,6 @@ function upDateScreen() {
   //   }
   // }
 }
+
 
 

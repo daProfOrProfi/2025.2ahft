@@ -61,7 +61,7 @@ svg:not(:root) {
 .sensorList {
     position: relative;
     width: 90vw;
-    height: 90vw;
+    height: 20vw;
   /*   width : 200px; */
   /*   height: 200px; */
     border: 5px solid #333;
