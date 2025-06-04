@@ -43,9 +43,9 @@ laSensor.addEventListener("error", (event) => {
 */
 
 window.addEventListener("devicemotion", (event) => {
-    vx += event.acceleration.x * (event.interval);
-    vy += event.acceleration.y * (event.interval);
-    vz += event.acceleration.z * (event.interval);
+    vx += event.acceleration.x * (event.interval / 1000);
+    vy += event.acceleration.y * (event.interval / 1000);
+    vz += event.acceleration.z * (event.interval / 1000);
 })
 
 /*ondevicemotion = (event) => { }*/
