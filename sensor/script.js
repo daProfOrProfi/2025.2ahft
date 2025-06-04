@@ -20,6 +20,7 @@ let lastTimeStamp = Date.now();
 
 const options = { frequency: 60, referenceFrame: 'device' };
 
+/*
 let laSensor = new LinearAccelerationSensor(options);//({frequency: 60});
 //accelerometer without gravity
 laSensor.addEventListener('reading', e => {
@@ -38,7 +39,17 @@ laSensor.addEventListener("error", (event) => {
     console.log("Cannot connect to LinearAcceleration.");
     em.textContent += "no LinearAcceleration ";
   }
-} );
+});
+*/
+
+window.addEventListener("devicemotion", (event) => {
+    vx += event.acceleration.x * (event.interval);
+    vy += event.acceleration.y * (event.interval);
+    vz += event.acceleration.z * (event.interval);
+})
+
+/*ondevicemotion = (event) => { }*/
+
 
 function canvasClick() {
 //   canvas.clear();
@@ -55,7 +66,7 @@ function gardenClick() {
 function sensorListClick() {
     sensorList.textContent = "we start soon ";
     m4.value = 50;
-  laSensor.start();
+  //laSensor.start();
   const iinterval = setInterval( upDateScreen, 100 );
 }
 
