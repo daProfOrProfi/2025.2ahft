@@ -74,13 +74,13 @@ function upDateScreen() {
   //output.textContent =  "length la: " + laxa.length + "rel: " + roa.length + "abs: " + aoa.length + "\n";
   // if( laxa.length > 0 ){
     //linear acceleration worked
-    m4.value = vx.toFixed(3);
-    m5.value = vy.toFixed(3);
-    m6.value = vz.toFixed(3);
+    m4.value = vx.toFixed(3)*10;
+    m5.value = vy.toFixed(3)*10;
+    m6.value = vz.toFixed(3)*10;
     m7.value = Math.sqrt( Math.pow( vx, 2 ) + Math.pow( vy, 2 ) + Math.pow( vz, 2 ) );
-    ball.style.top  = (vy*40/500+42.5) + "vw";
-    ball.style.left = (vx*40/500+42.5) + "vw";
-    output.textContent += "vx: " + vx + "vy: " + vy + "vz: " + vz;
+    ball.style.top  = (vy*40/5+42.5) + "vw";
+    ball.style.left = (vx*40/5+42.5) + "vw";
+    //output.textContent += "vx: " + vx + "vy: " + vy + "vz: " + vz;
   //   while( laxa.length > 0 ){
   //     laxa.shift();
   //   }
