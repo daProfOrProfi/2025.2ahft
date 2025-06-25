@@ -38,7 +38,7 @@ svg:not(:root) {
     border: 5px solid #CCC;
     border-radius: 10px;
 }
-  
+
 .ball {
     position: absolute;
     top   : 42.5vw;
@@ -52,11 +52,11 @@ svg:not(:root) {
     background: green;
     border-radius: 100%;
 }
-  
+
 .output {
     font-size:20px;
 }
-  
+
 
 .sensorList {
     position: relative;

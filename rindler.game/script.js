@@ -64,15 +64,6 @@ function updateGame() {
         }
     }
 
-    if( player.x < obstacle.x + obstacle.width &&
-        player.x + player.width > obstacle.x &&
-        player.y < obstacle.y + obstacle.height &&
-        player.y + player.height > obstacle.y
-    ){
-        alert('Game Over');
-        obstacle.x = 400;
-        score = 0;
-        obstacle.speed = 3;
     }
 
     ctx.fillStyle = 'red';

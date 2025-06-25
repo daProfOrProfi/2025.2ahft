@@ -4,35 +4,38 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
     <meta name="robots" content="noindex, nofollow">
-    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" name="viewport" 
+          content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./style.css">
-    <title>Detecting device orientation - Gyroscope Example - code sample for me</title>
+    <title>Detecting device orientation - Acceleration Example - 
+           code sample for 2ahmbt</title>
   </head>
   <body>
-    <div class="sensorList" onclick="sensorListClick()" ontouchstart="sensorListClick()">
-      Click to start
-    </div>
-    <div class="garden" onclick="gardenClick()">
-      <div class="ball"></div>
-    </div>
+      <!-- https://developer.mozilla.org/en-US/docs/Web/API/Window/devicemotion_event -->
+      <div class="sensorList" onclick="sensorListClick()"
+           ontouchstart="sensorListClick()">
+          Click to start
+      </div>
+      <div class="garden" onclick="gardenClick()">
+          <div class="ball"></div>
+      </div>
 
-    <pre class="output"></pre>
+      <meter id="meter_4" name="meter_4" value="0"
+             min="-100" max="100" style="width:90vw;"></meter><br>
+      <meter id="meter_5" name="meter_5" value="0" min="-100" max="100" style="width:90vw;"></meter><br>
+      <meter id="meter_6" name="meter_6" value="0" min="-100" max="100" style="width:90vw;"></meter><br>
+      <meter id="meter_7" name="meter_7" value="0" min="-100" max="100" style="width:90vw;"></meter><br>
 
-    <meter id="meter_1" name="meter_1" value="0" min="-100" max="100" style="width:90vw;"></meter><br>
-    <meter id="meter_2" name="meter_2" value="0" min="-100" max="100" style="width:90vw;"></meter><br>
-    <meter id="meter_3" name="meter_3" value="0" min="-100" max="100" style="width:90vw;"></meter><br>
-    <meter id="meter_4" name="meter_4" value="0" min="-100" max="100" style="width:90vw;"></meter><br>
-    <meter id="meter_5" name="meter_5" value="0" min="-100" max="100" style="width:90vw;"></meter><br>
-    <meter id="meter_6" name="meter_6" value="0" min="-100" max="100" style="width:90vw;"></meter><br>
-    <meter id="meter_7" name="meter_7" value="0" min="-100" max="100" style="width:90vw;"></meter><br>
+      <pre class="output"></pre>
+      <meter id="meter_1" name="meter_1" value="0" min="-100" max="100" style="width:90vw;"></meter><br>
+      <meter id="meter_2" name="meter_2" value="0" min="-100" max="100" style="width:90vw;"></meter><br>
+      <meter id="meter_3" name="meter_3" value="0" min="-100" max="100" style="width:90vw;"></meter><br>
 
-    <!-- <canvas id="theCanvas" width="200" height="200" style="border:1px solid #000000;width:90vw;height:90vw;" onclick="canvasClick()" > -->
-    <!-- <canvas id="theCanvas" width="200" height="200" style="border:1px solid #000000;" onclick="canvasClick()" > -->
-
-    <!-- <script src="./importantButBoring.js"></script> -->
-    <script src="./script.js"></script>
+      <!-- <canvas id="theCanvas" width="200" height="200" style="border:1px solid #000000;width:90vw;height:90vw;" onclick="canvasClick()" > -->
+      <!-- <canvas id="theCanvas" width="200" height="200" style="border:1px solid #000000;" onclick="canvasClick()" > -->
+      <!-- <script src="./importantButBoring.js"></script> -->
+      <script src="./script.js"></script>
   </body>
 </html>
 
